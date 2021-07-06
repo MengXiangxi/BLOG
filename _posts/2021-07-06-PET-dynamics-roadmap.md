@@ -5,6 +5,7 @@ categories:
 tags:
   - PET
   - dynamic imaging
+use_math: true
 ---
 
 ## Book chapters and reviews articles
@@ -13,4 +14,6 @@ tags:
 
 Chapter 21 of this book, "Tracer Kinetic Modeling", briefly discusses the transportation phenomenon and the compartment models.
 
-$$E=mc^2$$
+$$
+E=mc^2
+$$
