@@ -5,7 +5,8 @@ categories:
 tags:
   - PET
   - dynamic imaging
-use_math: true
+date: 2021-07-06
+layout: post
 ---
 
 ## Book chapters and reviews articles
