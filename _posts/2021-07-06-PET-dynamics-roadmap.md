@@ -14,6 +14,4 @@ use_math: true
 
 Chapter 21 of this book, "Tracer Kinetic Modeling", briefly discusses the transportation phenomenon and the compartment models.
 
-$$
-K(a,b) = \int \mathcal{D}x(t) \exp(\frac{2\pi i S[x]}{\hbar})
-$$
+$$E = mc^2$$
