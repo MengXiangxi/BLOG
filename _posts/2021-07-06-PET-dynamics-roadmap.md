@@ -37,4 +37,26 @@ In this review article, the authors summarized comprehensively all aspects of ne
 
 ## Software
 
-- 
+- [KMtoolbox](https://github.com/mscipio/KMtoolbox)
+
+KMToolbox is a MATLAB program to directly estimate various model parameters, directly measured from the 4D image. It is capable of processing both PET and DCE-MRI.
+
+However, the major limitation is the lack of reliable documentations. Although the code is clearly written with ample comments, and the author [Michele Scipioni](https://mscipio.github.io/) provided some further information on the [Project Page](https://mscipio.github.io/project/kmtool/), there are still some confusing aspects, as the conventions and notations in kinetic modeling are not unified.
+
+- [pmod](https://pmod.com/)
+
+pmod is a commercial software built with JAVA, and is rather costly. I am not a big fan of pmod, but admittedly it provides some very useful application-specific shortcut solutions. The modules involved in kinetic modeling are [PKIN](https://www.pmod.com/web/?page_id=660) (parameter estimation, etc.) and [PXMOD](https://www.pmod.com/web/?page_id=667) (pixel/voxel-wise modeling). Admittedly, pmod integrates some kinetic models which save a lot of efforts.
+
+## Representative researchers
+
+- [Richard E. Carson](https://seas.yale.edu/faculty-research/faculty-directory/richard-e-carson)
+
+Carson is one of the pioneers in PET kinetic modeling. He earned his PhD in UCLA, and he must has some relationships with Michael Phelps or Edward Hoffman. Now he is leading a team in Yale.
+
+- Yun Zhou
+
+Now in United Imaging Healthcare, Dr. Zhou is known for developing the reverse equilibrium plot and multi-graphical analysis.
+
+- [Guobao Wang](https://wanglab.faculty.ucdavis.edu/)
+
+Guobao Wang is in UCDavis and his recent research highlight is on EXPLORER PET. He has a code for direct reconstruction of dynamic PET, [DIRECT v0.1](https://sites.google.com/site/gbwangonline/code).

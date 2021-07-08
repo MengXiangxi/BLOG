@@ -9,8 +9,6 @@ layout: home
 list_title: "Latest Posts"
 ---
 
-# Welcome
-
 welcome to the blog site! You can browse contents by categories or tags in the [Categories](./categories/) page. The [About](./about/) page provides some realization details. [Home page](https://www.mengxiangxi.info/) links back to the main site.
 
 Hope you find what you need. And in case you do not, just contact me, maybe.
