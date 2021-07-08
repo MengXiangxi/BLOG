@@ -28,3 +28,13 @@ Chapter 23 of this book, "Kinetic Modeling in Positron Emission Tomography", by 
 - **Positron Emission Tomography: Basic Sciences**, edited by Dale L. Bailey et. al., Springer, 2005.
 
 Chapter 6 of this book, "Tracer Kinetic Modeling in PET", by Richard E. Carson.
+
+## Review Articles
+
+- Hooker, Jacob M., and Richard E. Carson. "Human positron emission tomography neuroimaging." *Annual review of biomedical engineering* 21 (2019): 551-581.
+
+In this review article, the authors summarized comprehensively all aspects of neuroimaging. Part of it discusses modeling in a straightforward way, however, it is based entirely on the reference tissue method.
+
+## Software
+
+- 
