@@ -3,8 +3,8 @@ title: "Dynamic PET imaging itinerary"
 categories:
   - Imaging
 tags:
-  - PET
   - dynamic imaging
+  - study note
 date: 2021-07-06
 layout: post
 ---
