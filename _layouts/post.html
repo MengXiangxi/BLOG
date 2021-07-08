@@ -27,7 +27,7 @@ layout: default
       <span>[
         {% for tag in page.tags %}
           {% capture tag_name %}{{ tag }}{% endcapture %}
-          <a href="/categories/#{{ tag_name }}"><code class="highlighter-rouge"><nobr>{{ tag_name }}</nobr></code>&nbsp;</a>
+          <a href="{{ 'categories' | relative_url }}/#{{ tag_name }}"><code class="highlighter-rouge"><nobr>{{ tag_name }}</nobr></code>&nbsp;</a>
         {% endfor %}
       ]</span>
   </header>
