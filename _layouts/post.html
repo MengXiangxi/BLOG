@@ -25,6 +25,7 @@ layout: default
         {% endfor %}
       {%- endif -%}</p>
       <div class="post-categories">
+        Category: 
         {% if post %}
           {% assign categories = post.categories %}
         {% else %}
@@ -34,13 +35,12 @@ layout: default
         <a href="{{site.baseurl}}/categories/#Cat_{{category}}">{{category}}</a>
         {% unless forloop.last %}&nbsp;{% endunless %}
         {% endfor %}
-      </div>
-      <span>[
+        Tags: 
         {% for tag in page.tags %}
           {% capture tag_name %}{{ tag }}{% endcapture %}
           <a href="{{ 'categories' | relative_url }}/#{{ tag_name }}"><code class="highlighter-rouge"><nobr>{{ tag_name }}</nobr></code>&nbsp;</a>
         {% endfor %}
-      ]</span>
+      </div>
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
