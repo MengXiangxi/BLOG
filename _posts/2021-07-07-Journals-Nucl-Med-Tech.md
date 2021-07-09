@@ -4,6 +4,7 @@ categories:
   - Imaging
 tags:
   - Journals
+  - checklist
 date: 2021-07-07
 layout: post
 ---
