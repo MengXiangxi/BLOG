@@ -5,7 +5,7 @@ categories:
 tags:
   - study note
   - checklist
-date: 3021-07-10
+date: 2021-07-10
 layout: post
 ---
 

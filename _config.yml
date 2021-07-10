@@ -54,7 +54,7 @@ header_pages:
 # Build settings
 theme: minima
 
-future: false
+show_drafts: true
 
 plugins:
  - jekyll-feed
