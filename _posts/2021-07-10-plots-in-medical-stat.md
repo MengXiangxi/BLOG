@@ -13,7 +13,7 @@ layout: post
 
 The receiver operating plot is used in determining the performance of a discrete model.
 
-![ROC curve](../assets/PlotsInMedicalStat/ROC.png)
+![ROC curve](/assets/PlotsInMedicalStat/ROC.png)
 
 The ROC plot
 
@@ -24,7 +24,7 @@ sklearn.metrics.roc_curve(y_true, y_score, *, pos_label=None, sample_weight=None
 
 ## Bland-Altman plot
 
-![Bland-Altman plot](../assets/PlotsInMedicalStat/BlandAltmanROC.png)
+![Bland-Altman plot](/assets/PlotsInMedicalStat/BlandAltmanROC.png)
 
 ## Nomogram
 
