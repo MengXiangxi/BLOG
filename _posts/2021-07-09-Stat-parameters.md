@@ -13,13 +13,17 @@ layout: post
 
 ## Evaluation metrics of a binary predictive model
 
-- Sensitivity, a.k.a., Recall
+- Sensitivity, a.k.a., Recall, True positive rate (TPR)
 
 $$\mathrm{Sensitivity} = \frac{\mathrm{TP}}{\mathrm{TP}+\mathrm{FN}}$$
 
 - Specificity
 
 $$\mathrm{Specificity} = \frac{\mathrm{TN}}{\mathrm{TN}+\mathrm{FP}}$$
+
+- False positive rate, FPR
+
+$$\mathrm{FPR} = \frac{\mathrm{FP}}{\mathrm{TN}+\mathrm{FP}} = 1 - \mathrm{Specificity}$$
 
 - Positive predict value, PPV; a.k.a., Precision
 
@@ -31,9 +35,9 @@ $$\mathrm{NPV} = \frac{\mathrm{TN}}{\mathrm{TN}+\mathrm{FN}}$$
 
 - Likelihood radios, LR+, LR-
 
-$$\mathrm{LR}^+ = \frac{\mathrm{Sensitivity}}{1-\mathrm{Specificity}}$$
+$$\mathrm{LR}^+ = \frac{\mathrm{Sensitivity}}{1-\mathrm{Specificity}} = \frac{\mathrm{TP}(\mathrm{TN}+\mathrm{FP})}{\mathrm{FP}(\mathrm{TP}+\mathrm{FN})}$$
 
-$$\mathrm{LR}^- = \frac{1-\mathrm{Sensitivity}}{\mathrm{Specificity}}$$
+$$\mathrm{LR}^- = \frac{1-\mathrm{Sensitivity}}{\mathrm{Specificity}} = \frac{\mathrm{FN}(\mathrm{TN}+\mathrm{FP})}{\mathrm{TN}(\mathrm{TP}+\mathrm{FN})}$$
 
 - Accuracy
 
