@@ -57,6 +57,10 @@ Carson is one of the pioneers in PET kinetic modeling. He earned his PhD in UCLA
 
 Now in United Imaging Healthcare, Dr. Zhou is known for developing the reverse equilibrium plot and multi-graphical analysis.
 
+- [Richard Wahl](https://profiles.wustl.edu/en/persons/richard-wahl)
+
+Richard Wahl is one of the leading PET researchers in the US, and is the head of the radiology department of WUSTL. He is also one of the leading researchers in dynamic PET.
+
 - [Guobao Wang](https://wanglab.faculty.ucdavis.edu/)
 
 Guobao Wang is in UCDavis and his recent research highlight is on EXPLORER PET. He has a code for direct reconstruction of dynamic PET, [DIRECT v0.1](https://sites.google.com/site/gbwangonline/code).
