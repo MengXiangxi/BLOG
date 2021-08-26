@@ -67,37 +67,25 @@ Guobao Wang is in UCDavis and his recent research highlight is on EXPLORER PET. 
 
 ## Notes
 
-### Important concepts
-
-- Binding potential ($BP$)
- 
-The ratio between the bound radioligand to the unbound radioligand.
-
-$$BP \equiv \frac{B_\mathrm{max}}{K_D} $$
-
-- Distribution volume (VD, or DV)
-
-- Partition coefficient ($\lambda$)
-
 ### Graphical analysis
 
 In graphical analysis, $C(t)$ is the concentration of the tracer in the ROI, $C_P(t)$ is the concentration in plasma.
 
 - Patlak plot, or Gjedde-Patlak plot
 
-$$\frac{C(t)}{C_P(t)} = K_i \frac{\int^t_0 C_P(s)\mathrm{d}s}{C_P(t)} + V_b$$
+$$\frac{C(t)}{C_\mathrm{P}(t)} = K_i \frac{\int^t_0 C_\mathrm{P}(s)\mathrm{d}s}{C_\mathrm{P}(t)} + V_b$$
 
 Here, $K_i$ is obtained by regression. Patlak model assumes non-reversible uptake.
 
 - Logan plot
 
-$$\frac{\int_0^t C(s)\mathrm{d}s}{C(t)} = DV_\mathrm{L} \frac{\int_0^t C_P(s)\mathrm{d}s}{C(t)}+\beta_\mathrm{L}$$
+$$\frac{\int_0^t C(s)\mathrm{d}s}{C(t)} = DV_\mathrm{L} \frac{\int_0^t C_\mathrm{P}(s)\mathrm{d}s}{C(t)}+\beta_\mathrm{L}$$
 
 Here, $DV_\mathrm{L}$ correspond to the distribution volume. Logan also applies to reversible tracers.
 
 - Reverse equilibrium (RE) plot
 
-$$\frac{\int_0^t C(s)\mathrm{d}s}{C_P(t)} = DV_\mathrm{RE} \frac{\int_0^t C_P(s)\mathrm{d}s}{C_P(t)}+\beta_\mathrm{RE}$$
+$$\frac{\int_0^t C(s)\mathrm{d}s}{C_\mathrm{P}(t)} = DV_\mathrm{RE} \frac{\int_0^t C_\mathrm{P}(s)\mathrm{d}s}{C_\mathrm{P}(t)}+\beta_\mathrm{RE}$$
 
 RE is another version of Logan.
 
@@ -117,8 +105,11 @@ The rate constant $K_1$ is capitalized because it is usually in a different unit
 ![1TCM]({{ site.baseurl }}/assets/DynamicImaging/Model1TC.png)
 
 Kinetic equation
+
 $$\frac{\mathrm{d}C_\mathrm{T}}{\mathrm{d}t} = K_1 C_P - k_2 C_\mathrm{T}$$
+
 Solution
+
 $$C_\mathrm{T}(t) = K_1 \mathrm{e}^{-k_2t}*C_\mathrm{P}(t) $$
 
 - 2TC
@@ -145,3 +136,44 @@ $$
 \frac{\mathrm{d}}{\mathrm{d}t} C_\mathrm{NS} &=& k_5 C_\mathrm{F} - k_6 C_\mathrm{NS}
 \end{array}\right.
 $$
+
+### Important concepts
+
+- Binding potential ($BP$)
+ 
+The ratio between the bound radioligand to the unbound radioligand. An *in vitro* definition could be
+
+$$BP \equiv \frac{B_\mathrm{max}}{K_D} $$
+
+Alternatively, several other types of $BP$ can be defined:
+
+$$
+\begin{array}{rcl}
+BP_\mathrm{F} & \equiv & \left[\frac{C_\mathrm{S}}{C_\mathrm{P,F}}\right]_\mathrm{eq} \\
+BP_\mathrm{P} & \equiv & \left[\frac{C_\mathrm{S}}{C_\mathrm{P}}\right]_\mathrm{eq} \\
+BP_\mathrm{ND} & \equiv & \left[\frac{C_\mathrm{S}}{C_\mathrm{ND}}\right]_\mathrm{eq} 
+\end{array}
+$$
+
+$C_\mathrm{P,F}$ is the free tracers in the plasma,
+
+$$C_\mathrm{P,F} \equiv f_\mathrm{P}C_\mathrm{P} = C_\mathrm{F} \equiv f_\mathrm{ND}C_\mathrm{ND}$$
+
+where $f_\star$ is the free fraction.
+
+- Distribution volume ($V_T$, or $DV$)
+
+$$V_T \equiv \left[\frac{C_\mathrm{T}}{C_\mathrm{P}}\right]_\mathrm{eq}$$
+
+The notations are defined later.
+
+- Partition coefficient ($\lambda$)
+
+- Summary of the relationships
+
+| Name | Definition | 3TC | 2TC | DV |
+| :---: | :---: | :---: | :---: | :---: |
+| $BP_\mathrm{F}$ | $\frac{B_\mathrm{avail}}{K_D}$ | $\frac{k_3}{k_4}$ | $\frac{1}{f_\mathrm{P}}\frac{K_1k_3}{k_2k_4}$ | $\frac{1}{f_\mathrm{P}}(V_T - V_\mathrm{ND})$ |
+| $BP_\mathrm{P}$ | $f_\mathrm{P}\frac{B_\mathrm{avail}}{K_D}$ | $\frac{k_3}{k_4}$ | $\frac{K_1k_3}{k_2k_4}$ | $V_T - V_\mathrm{ND}$ |
+| $BP_\mathrm{ND}$ | $f_\mathrm{ND}\frac{B_\mathrm{avail}}{K_D}$ | $\frac{k_3}{k_4}\frac{k_6}{k_5+k_6}$ | $\frac{k_3}{k_4}$ | $\frac{V_T-V_\mathrm{ND}}{V_\mathrm{ND}}$ |
+| V_T | $\left[\frac{C_\mathrm{T}}{C_\mathrm{P}}\right]_\mathrm{eq}$ | $\frac{K_1}{k_2}(1+\frac{k_3}{k_4}+\frac{k_5}{k_6})$ | $\frac{K_1}{k_2}(1+\frac{k_3}{k_4})$ | - |
