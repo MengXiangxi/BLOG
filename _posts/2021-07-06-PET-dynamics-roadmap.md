@@ -15,7 +15,7 @@ In this post, I am summarizing some materials on dynamic PET imaging, especially
 
 - **Physics in Nuclear Medicine**, Simon R. Cherry et. al., Sanders, 2012 4th ed.
 
-Chapter 21 of this book, "Tracer Kinetic Modeling", briefly discusses the transportation phenomenon and the compartment models.
+Chapter 21 of this book, "Tracer Kinetic Modeling", briefly discusses the basic principles in kinetic analysis and the compartment modeling, and presented several models. It emphasizes on the transportation of the blood, and briefly deals with the FDG model. It is of an entry level (undergraduate level), not especially focusing on neurology. However, not too much information on the compartment model is presented.
 
 - **Basic Sciences of Nuclear Medicine**, edited by Magdy M. Khalil, Springer, 2011.
 
@@ -51,7 +51,7 @@ pmod is a commercial software built with JAVA, and is rather costly. I am not a 
 
 - [Richard E. Carson](https://seas.yale.edu/faculty-research/faculty-directory/richard-e-carson)
 
-Carson is one of the pioneers in PET kinetic modeling. He earned his PhD in UCLA, and he must has some relationships with Michael Phelps or Edward Hoffman. Now he is leading a team in Yale.
+Carson is one of the pioneers in PET kinetic modeling. He earned his PhD in UCLA, and he should have got some relationships with Michael Phelps or Edward Hoffman. Now he is leading a team in Yale.
 
 - Yun Zhou
 
@@ -64,3 +64,84 @@ Richard Wahl is one of the leading PET researchers in the US, and is the head of
 - [Guobao Wang](https://wanglab.faculty.ucdavis.edu/)
 
 Guobao Wang is in UCDavis and his recent research highlight is on EXPLORER PET. He has a code for direct reconstruction of dynamic PET, [DIRECT v0.1](https://sites.google.com/site/gbwangonline/code).
+
+## Notes
+
+### Important concepts
+
+- Binding potential ($BP$)
+ 
+The ratio between the bound radioligand to the unbound radioligand.
+
+$$BP \equiv \frac{B_\mathrm{max}}{K_D} $$
+
+- Distribution volume (VD, or DV)
+
+- Partition coefficient ($\lambda$)
+
+### Graphical analysis
+
+In graphical analysis, $C(t)$ is the concentration of the tracer in the ROI, $C_P(t)$ is the concentration in plasma.
+
+- Patlak plot, or Gjedde-Patlak plot
+
+$$\frac{C(t)}{C_P(t)} = K_i \frac{\int^t_0 C_P(s)\mathrm{d}s}{C_P(t)} + V_b$$
+
+Here, $K_i$ is obtained by regression. Patlak model assumes non-reversible uptake.
+
+- Logan plot
+
+$$\frac{\int_0^t C(s)\mathrm{d}s}{C(t)} = DV_\mathrm{L} \frac{\int_0^t C_P(s)\mathrm{d}s}{C(t)}+\beta_\mathrm{L}$$
+
+Here, $DV_\mathrm{L}$ correspond to the distribution volume. Logan also applies to reversible tracers.
+
+- Reverse equilibrium (RE) plot
+
+$$\frac{\int_0^t C(s)\mathrm{d}s}{C_P(t)} = DV_\mathrm{RE} \frac{\int_0^t C_P(s)\mathrm{d}s}{C_P(t)}+\beta_\mathrm{RE}$$
+
+RE is another version of Logan.
+
+### Compartment Models
+
+Here, $C_\mathrm{P}$ means the plasma concentration, $C_\mathrm{F}$ corresponds to the free tracer in tissue, $C_\mathrm{S}$ corresponds to the specific binding, and $C_\mathrm{NS}$ corresponds to the non-specific binding.
+
+$C_\mathrm{ND}$ is the non-displacable tracer concentration, and
+$$C_\mathrm{ND} = C_\mathrm{F} + C_\mathrm{NS}$$
+while $C_\mathrm{T}$ is the total concentration of the tissue, and
+$$C_\mathrm{T} = C_\mathrm{S} + C_\mathrm{ND}$$
+
+The rate constant $K_1$ is capitalized because it is usually in a different unit.
+
+- 1TC
+
+![1TCM]({{ site.baseurl }}/assets/DynamicImaging/Model1TC.png)
+
+Kinetic equation
+$$\frac{\mathrm{d}C_\mathrm{T}}{\mathrm{d}t} = K_1 C_P - k_2 C_\mathrm{T}$$
+Solution
+$$C_\mathrm{T}(t) = K_1 \mathrm{e}^{-k_2t}*C_\mathrm{P}(t) $$
+
+- 2TC
+
+![2TCM]({{ site.baseurl }}/assets/DynamicImaging/Model2TC.png)
+
+$$
+\left \{ 
+\begin{array}{rcl}
+\frac{\mathrm{d}}{\mathrm{d}t} C_\mathrm{ND} &=& K_1 C_\mathrm{P} - (k_2+k_3) C_\mathrm{ND} + k_4 C_\mathrm{S} \\
+\frac{\mathrm{d}}{\mathrm{d}t} C_\mathrm{S} &=& k_3 C_\mathrm{ND} - k_4 C_\mathrm{S}
+\end{array}\right.
+$$
+
+- 3TC
+
+![3TCM]({{ site.baseurl }}/assets/DynamicImaging/Model3TC.png)
+
+$$
+\left \{ 
+\begin{array}{rcl}
+\frac{\mathrm{d}}{\mathrm{d}t} C_\mathrm{F} &=& K_1 C_\mathrm{P} - (k_2+k_3+k_5) C_\mathrm{F} + k_4 C_\mathrm{S} + k_6 C_\mathrm{NS} \\
+\frac{\mathrm{d}}{\mathrm{d}t} C_\mathrm{S} &=& k_3 C_\mathrm{F} - k_4 C_\mathrm{S}\\
+\frac{\mathrm{d}}{\mathrm{d}t} C_\mathrm{NS} &=& k_5 C_\mathrm{F} - k_6 C_\mathrm{NS}
+\end{array}\right.
+$$
