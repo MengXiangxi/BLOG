@@ -19,7 +19,9 @@ Chapter 21 of this book, "Tracer Kinetic Modeling", briefly discusses the basic 
 
 - **Basic Sciences of Nuclear Medicine**, edited by Magdy M. Khalil, Springer, 2011.
 
-Chapter 16 of this book, "Tracer Kinetic Modeling: Basics and Concepts", by Kjell Erlandsson from University College of London.
+Chapter 16 of this book, "Tracer Kinetic Modeling: Basics and Concepts", by Kjell Erlandsson from University College of London, concisely summarized several major concepts and models in kinetic modeling. It goes through the basic derivative equations that describe the behavior of the tracers in the compartments. Nicely written reference.
+
+Chapter 17 of this book, "Tracer Kinetic Modeling: Methodology and Applications", by M'hamed Bentourkia from Université de Sherbrooke, Canada, focuses on the practical aspects of dynamic PET and kinetic modeling studies. It also briefly introduced the spectral analysis.
 
 - **Emission Tomography: The Fundamentals of PET and SPECT**, edited by Miles N. Wernick and John N. Aarsvold, Elsevier, 2004.
 
@@ -137,6 +139,10 @@ $$
 \end{array}\right.
 $$
 
+- Reference tissue method
+
+![3TCM]({{ site.baseurl }}/assets/DynamicImaging/ModelReference.png)
+
 ### Important concepts
 
 - Binding potential ($BP$)
@@ -176,4 +182,4 @@ The notations are defined later.
 | $BP_\mathrm{F}$ | $\frac{B_\mathrm{avail}}{K_D}$ | $\frac{k_3}{k_4}$ | $\frac{1}{f_\mathrm{P}}\frac{K_1k_3}{k_2k_4}$ | $\frac{1}{f_\mathrm{P}}(V_T - V_\mathrm{ND})$ |
 | $BP_\mathrm{P}$ | $f_\mathrm{P}\frac{B_\mathrm{avail}}{K_D}$ | $\frac{k_3}{k_4}$ | $\frac{K_1k_3}{k_2k_4}$ | $V_T - V_\mathrm{ND}$ |
 | $BP_\mathrm{ND}$ | $f_\mathrm{ND}\frac{B_\mathrm{avail}}{K_D}$ | $\frac{k_3}{k_4}\frac{k_6}{k_5+k_6}$ | $\frac{k_3}{k_4}$ | $\frac{V_T-V_\mathrm{ND}}{V_\mathrm{ND}}$ |
-| V_T | $\left[\frac{C_\mathrm{T}}{C_\mathrm{P}}\right]_\mathrm{eq}$ | $\frac{K_1}{k_2}(1+\frac{k_3}{k_4}+\frac{k_5}{k_6})$ | $\frac{K_1}{k_2}(1+\frac{k_3}{k_4})$ | - |
+| $V_T$ | $\left[\frac{C_\mathrm{T}}{C_\mathrm{P}}\right]_\mathrm{eq}$ | $\frac{K_1}{k_2}(1+\frac{k_3}{k_4}+\frac{k_5}{k_6})$ | $\frac{K_1}{k_2}(1+\frac{k_3}{k_4})$ | - |
