@@ -73,6 +73,7 @@ ssh-keygen -t ed25519 -C "your_email@example.com"
 ssh-agent
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_ed25519
+ssh -T git@github.com
 ```
 
 ## R
