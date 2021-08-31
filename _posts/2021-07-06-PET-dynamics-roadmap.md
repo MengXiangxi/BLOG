@@ -119,7 +119,7 @@ $$C_\mathrm{T}(t) = K_1 \mathrm{e}^{-k_2t}*C_\mathrm{P}(t) $$
 ![2TCM]({{ site.baseurl }}/assets/DynamicImaging/Model2TC.png)
 
 $$
-\left \{ 
+\left \{
 \begin{array}{rcl}
 \frac{\mathrm{d}}{\mathrm{d}t} C_\mathrm{ND} &=& K_1 C_\mathrm{P} - (k_2+k_3) C_\mathrm{ND} + k_4 C_\mathrm{S} \\
 \frac{\mathrm{d}}{\mathrm{d}t} C_\mathrm{S} &=& k_3 C_\mathrm{ND} - k_4 C_\mathrm{S}
@@ -131,7 +131,7 @@ $$
 ![3TCM]({{ site.baseurl }}/assets/DynamicImaging/Model3TC.png)
 
 $$
-\left \{ 
+\left \{
 \begin{array}{rcl}
 \frac{\mathrm{d}}{\mathrm{d}t} C_\mathrm{F} &=& K_1 C_\mathrm{P} - (k_2+k_3+k_5) C_\mathrm{F} + k_4 C_\mathrm{S} + k_6 C_\mathrm{NS} \\
 \frac{\mathrm{d}}{\mathrm{d}t} C_\mathrm{S} &=& k_3 C_\mathrm{F} - k_4 C_\mathrm{S}\\
@@ -146,7 +146,7 @@ $$
 ### Important concepts
 
 - Binding potential ($BP$)
- 
+
 The ratio between the bound radioligand to the unbound radioligand. An *in vitro* definition could be
 
 $$BP \equiv \frac{B_\mathrm{max}}{K_D} $$
@@ -157,7 +157,7 @@ $$
 \begin{array}{rcl}
 BP_\mathrm{F} & \equiv & \left[\frac{C_\mathrm{S}}{C_\mathrm{P,F}}\right]_\mathrm{eq} \\
 BP_\mathrm{P} & \equiv & \left[\frac{C_\mathrm{S}}{C_\mathrm{P}}\right]_\mathrm{eq} \\
-BP_\mathrm{ND} & \equiv & \left[\frac{C_\mathrm{S}}{C_\mathrm{ND}}\right]_\mathrm{eq} 
+BP_\mathrm{ND} & \equiv & \left[\frac{C_\mathrm{S}}{C_\mathrm{ND}}\right]_\mathrm{eq}
 \end{array}
 $$
 
