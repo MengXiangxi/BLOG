@@ -19,6 +19,12 @@ from IPython.core.debugger import set_trace
 set_trace()
 ```
 
+- A workaround to skip a certain cell when running the notebook
+
+```python
+%%script skip-cell
+```
+
 - To use a conda environment as a kernel
 
 ```bash
