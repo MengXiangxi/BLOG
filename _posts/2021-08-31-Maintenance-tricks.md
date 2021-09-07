@@ -7,7 +7,8 @@ tags:
 date: 2021-08-31
 layout: post
 ---
-> Various toolchains have been set up to facilitate daily chores. However, setting up and maintaining the environment becomes troublesome. Here, some common commands and methods are summarized.
+
+Various toolchains have been set up to facilitate daily chores. However, setting up and maintaining the environment becomes troublesome. Here, some common commands and methods are summarized.
 
 ## Jupyter Notebook
 
