@@ -12,6 +12,8 @@ Various toolchains have been set up to facilitate daily chores. However, setting
 
 ## Jupyter Notebook
 
+This is organized as a list structure.
+
 - To set breakpoint
 
 ```python
