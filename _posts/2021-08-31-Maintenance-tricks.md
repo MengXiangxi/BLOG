@@ -78,6 +78,21 @@ ssh-add ~/.ssh/id_ed25519
 ssh -T git@github.com
 ```
 
+- Change remote URI
+
+Github recently ask clients to use ssh everywhere. It is worthwhile to switch from HTTPS to SSH.
+
+```git
+git remote -v
+# View existing remote
+
+git remote set-url origin git://new_uri.git
+# Change
+
+git remote -v
+# Validate
+```
+
 ## R
 
 - To update R on Windows
