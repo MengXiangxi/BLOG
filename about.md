@@ -8,7 +8,7 @@ This site is a part of my [Personal page](https://mengxiangxi.info/). It is host
 
 The theme is [Jekyll](https://jekyllrb.com/) [minima](https://github.com/jekyll/minima), and the markdown parser is [kramdown](https://kramdown.gettalong.org/). The math renderer is [MathJax](https://www.mathjax.org/).
 
-<div class="w3-container" id="comments">
+<div id="comments">
   <h2>Comments</h2>
   <div id="disqus_thread"></div>
   <script>
@@ -28,6 +28,8 @@ The theme is [Jekyll](https://jekyllrb.com/) [minima](https://github.com/jekyll/
 </div>
 
 <div id="SOHUCS" sid="blog-about"></div>
+<h2>Alternative comments</h2>
+<p>The Disqus serve is not available in some places. If you fail to load a comment box above, please try this one below. Thank you!</p>
 <script charset="utf-8" type="text/javascript" src="https://cy-cdn.kuaizhan.com/upload/changyan.js" ></script>
 <script type="text/javascript">
 window.changyan.api.config({
