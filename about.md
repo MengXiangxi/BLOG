@@ -25,15 +25,15 @@ The theme is [Jekyll](https://jekyllrb.com/) [minima](https://github.com/jekyll/
   })();
   </script>
   <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</div>
 
-<div id="SOHUCS" sid="blog-about"></div>
-<h2>Alternative comments</h2>
-<p>The Disqus serve is not available in some places. If you fail to load a comment box above, please try this one below. Thank you!</p>
-<script charset="utf-8" type="text/javascript" src="https://cy-cdn.kuaizhan.com/upload/changyan.js" ></script>
-<script type="text/javascript">
-window.changyan.api.config({
-appid: 'cyvFlY7K6',
-conf: 'prod_8859dfcc6b8c4fd540417657c60d85f1'
-});
-</script>
+  <h2>Alternative comments</h2>
+  <p>The Disqus serve is not available in some places. If you fail to load a comment box above, please try this one below. Thank you!</p>
+    <div id="SOHUCS" sid="blog-about"></div>
+    <script charset="utf-8" type="text/javascript" src="https://cy-cdn.kuaizhan.com/upload/changyan.js" ></script>
+    <script type="text/javascript">
+        window.changyan.api.config({
+            appid: 'cyvFlY7K6',
+            conf: 'prod_8859dfcc6b8c4fd540417657c60d85f1'
+        });
+  </script>
+</div>
