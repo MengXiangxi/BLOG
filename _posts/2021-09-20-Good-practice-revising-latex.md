@@ -36,7 +36,7 @@ In either situation, you have to specify the package in the preamble using the `
 | Deleting | `\remove{}`| `\deleted{}` |
 | Replacement | `\replace{old}{new}` | `\replaced{new}{old}` |
 | Commenting | `\comment{}{}` | `\comment{}` |
-| Highlighting | `\highlight{}` | `\highlight` |
+| Highlighting | `\highlight{}` | `\highlight{}` |
 
 However, `easyReview` is kind of simplified, and `changes` is more exquisite, with various configurable features through optional parameters. Both packages have various known problems, especially when it comes to math equations, citations, and floats. Workaround measures are required.
 
