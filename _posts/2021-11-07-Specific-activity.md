@@ -33,16 +33,25 @@ First, we have the basic law of radioactivity, or the definition of radioactivit
 $$A = -\frac{\mathrm{d}N}{\mathrm{d}t}=\lambda N$$
 
 This equation relates the radioactivity $A$ to the decay constant $\lambda$ and the number of particles $N$. Here we also have
+
 $$T_{1/2} = \frac{\ln 2}{\lambda}$$
+
 and
+
 $$n = \frac{N}{N_A}$$
+
 $$w = n \cdot M_w$$
+
 where $T_\frac{1}{2}$ corresponds to the half life, $N_A$ is the Avogadro constant, $w$ is the mass of the radioactive material, and $M_w$ is the molar mass of the corresponding material.
 
 Taking everything together, we obtain the following relationship,
+
 $$n = \frac{A}{\lambda N_A} = \frac{A \cdot T_\frac{1}{2}}{\ln 2\cdot N_A}$$
+
 $$w = \frac{A \cdot T_\frac{1}{2} \cdot M_w}{\ln 2\cdot N_A}$$
+
 and the specific activity $m$ could be calculated as
+
 $$m = \frac{A}{w} = \frac{\ln 2 \cdot N_A}{T_\frac{1}{2}\cdot M_W}$$
 
 ## A Javascript-based tool and an example
