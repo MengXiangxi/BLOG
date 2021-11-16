@@ -182,7 +182,7 @@ The notations are defined later.
   The [Turku PET center page](http://www.turkupetcentre.net/petanalysis/analysis_11c-pib.html) summarizes many related researches, for example,
   - Chen, Yin Jie, and Ilya M. Nasrallah. "Brain amyloid PET interpretation approaches: from visual assessment in the clinic to quantitative pharmacokinetic modeling." *Clinical and Translational Imaging* 5.6 (2017): 561-573.\
   This paper uses the reference tissue method.
-- [$^{99m}$Tc]Tc-MDP
+- [$^{99m}$Tc]Tc-MDP\
   MDP is a SPECT tracer, but due to the extreme importance and widespread applications, the kinetic study attracts much attention.
   - Schroth, Hans-Joachim, et al. "Comparison of the kinetics of methylene-diphosphonate (MDP) and dicarboxypropan-diphosphonic acid (DPD), two radio-diagnostics for bone scintigraphy." **European Journal of Nuclear Medicine** 9.12 (1984): 529-532.
 
