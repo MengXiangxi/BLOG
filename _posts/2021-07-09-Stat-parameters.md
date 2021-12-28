@@ -43,6 +43,10 @@ $$\mathrm{LR}^- = \frac{1-\mathrm{Sensitivity}}{\mathrm{Specificity}} = \frac{\m
 
 $$\mathrm{Accuracy} = \frac{\mathrm{TP}+\mathrm{TN}}{\mathrm{P}+\mathrm{N}}$$
 
+- Prevalence
+
+$$\mathrm{Prevalence} = \frac{\mathrm{TP}+\mathrm{FN}}{\mathrm{P}+\mathrm{N}}$$
+
 - Precision ==> PPV
 
 $$\mathrm{Precision} = \frac{\mathrm{TP}}{\mathrm{TP}+\mathrm{FP}}$$
