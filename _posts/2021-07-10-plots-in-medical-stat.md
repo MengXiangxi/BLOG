@@ -31,7 +31,7 @@ To statistically test whether two ROC are significantly different, the Delong's 
 
 The precision-recall curve plots precision against recall. In fact, the horizontal axis Recall, which is equivalent to sensitivity. The vertical axis is Precision, which is equivalent to PPV. Unlike in the ROC plot, the baseline in the precision-recall curve is $\mathrm{Precision} = 0.5$.
 
-![PRC curve]({{ site.baseurl }}/assets/PlotsInMedicalStat/PRC.png)
+![PRC curve]({{ site.baseurl }}/assets/PlotsInMedicalStat/prc.png)
 
 The precision-recall curve outperforms ROC in very unbalanced datasets. Its AUC is more sensitive with these datasets.
 
@@ -69,16 +69,18 @@ More information can be found in the reference [1](#ref1).
 
 Nomogram is a somewhat complicated analysis technique in medical statistics, it is associated with multivariate regression analysis, often generalized linear model.
 
-![Bland-Altman plot]({{ site.baseurl }}/assets/PlotsInMedicalStat/nomogram.png)
+![Nomogram]({{ site.baseurl }}/assets/PlotsInMedicalStat/nomogram.png)
 
 Although there is a python package (`PyNomo`) to generate virtually any type of nomogram, the most convenient practice is to use R (`rms`).
 
 ## Decision curve
 
 The decision curve also works with the predictive model. It first introduces the concept of "Net benefit" ($\mathrm{NB}$).
+
 $$
 \mathrm{NB} = \frac{\mathrm{TP}}{N} - \frac{\mathrm{FP}}{N}\frac{p_t}{1-p_t}
 $$
+
 where $N$ is the total sample size, and $p_t$ is a threshold probability of the positive rate of a patient. The first part describes the overall benefit of the intervention, while the latter part describes the harm. The horizontal axis is the threshold probability.
 
 First, two reference lines corresponding to intervention for none and intervention for all are drawn. Then, the model curve is also depicted, by adjusting $p_t$. According to literatures, $p_t$ is the predicted risk probability in a continuous predictive model; and it can be the cut-off value in a binary predictive model. Once the model parameter is fixed, TP and FP can be calculated and then the net benefit.
