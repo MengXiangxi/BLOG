@@ -20,7 +20,8 @@ Chapter 16 of this book, "Tracer Kinetic Modeling: Basics and Concepts", by Kjel
 Chapter 17 of this book, "Tracer Kinetic Modeling: Methodology and Applications", by M'hamed Bentourkia from Université de Sherbrooke, Canada, focuses on the practical aspects of dynamic PET and kinetic modeling studies. It also briefly introduced the spectral analysis.
 - **Basic Science of PET Imaging**, edited by Magdy M. Khalil, Springer, 2016.\
 This book is a daughter book to the one above. They are related, but quite different.\
-Chapter 14 of this book, "Compartmental Modeling in PET Kinetics", by Hiroshi Watabe from Tohoku University, is rather practical for data analysis. It is written rather logically, touching some practical issues such as model fitting. So, it is brief and comprehensive.
+Chapter 14 of this book, "Compartmental Modeling in PET Kinetics", by Hiroshi Watabe from Tohoku University, is rather practical for data analysis. It is written rather logically, touching some practical issues such as model fitting. So, it is brief and comprehensive.\
+Watabe worked under Richard Carson, and is still maintaining Carson's BLD software by porting it in to python as [pyBLD](http://www.rim.cyric.tohoku.ac.jp/software/pybld/pybld.html).
 - **Emission Tomography: The Fundamentals of PET and SPECT**, edited by Miles N. Wernick and John N. Aarsvold, Elsevier, 2004.\
 Chapter 23 of this book, "Kinetic Modeling in Positron Emission Tomography", by E. D. Morris et. al..
 - **Positron Emission Tomography: Basic Sciences**, edited by Dale L. Bailey et. al., Springer, 2005.\
