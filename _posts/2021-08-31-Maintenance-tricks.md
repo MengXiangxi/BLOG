@@ -11,6 +11,56 @@ excerpt: Various toolchains have been set up to facilitate daily chores. However
 
 Various toolchains have been set up to facilitate daily chores. However, setting up and maintaining the environment becomes troublesome. Here, some common commands and methods are summarized.
 
+## Ubuntu
+
+- Change the apt-get environment to aliyun. First back up the original list.
+
+```shell
+sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak
+```
+
+Then, edit `/etc/apt/sources.list`. The content of the file can be found in the [aliyun homepage](https://developer.aliyun.com/mirror/ubuntu). Finally, run
+
+```shell
+sudo apt-get update
+```
+
+- Grant user permission with `sudo chown`\
+It is used to temporarily grant a super user permission.
+
+```shell
+sudo chrown -R $USER [FOLDER]
+```
+
+- Monitoring system resources, a better way: [bashtop](https://github.com/aristocratos/bashtop)
+
+- GPU monitoring: `nvidia-smi`
+
+## WSL
+
+> Always use WSL2
+
+- Check current version
+
+```shell
+wsl.exe -l -v
+lsb_release -a
+```
+
+- Show remote (WSL) directory in windows explorer
+
+```shell
+explorer.exe .
+```
+
+## Recommended docker image
+
+Thanks to Hongjia Liu from the Department of Radiotherapy.
+
+```shell
+sudo docker run --name [DOCKER_NAME] -p 10000:8888 -e JUPYTER_ENABLE_LAB=yes -v [LOCAL_DIR:~/docker]:/home/jovyan/work jupyter/datascience-notebook:latest
+```
+
 ## Jupyter Notebook
 
 - To set breakpoint
