@@ -101,6 +101,14 @@ Forest plot is often associated with meta analysis and systematic reviews. Howev
 
 In python, `statsmodels` can be used to conduct meta analysis and draw forest plot. However, the appearance is kind of strange. The `forestplot` seems to be more convenient. OriginPro has a custom template file [here](https://www.originlab.com/fileExchange/details.aspx?fid=362).
 
+## Survival plot
+
+Survival plot is used to show the number of patients survive against time. Survival data can be used to conduct survival analysis. One of the fundamental concept in survival analysis is the Cox regression, named after the recently deceased statistician Sir David Cox.
+
+![Survival plot]({{ site.baseurl }}/assets/PlotsInMedicalStat/Survival.png)
+
+Survival plots can be generated in R using the `ggplot2` package. See [this post](https://cran.r-project.org/web/packages/survminer/vignettes/Informative_Survival_Plots.html) for detailed information.
+
 ## Resources
 
 <a name="ref1">1.</a> Van Calster, Ben, et al. "Calibration: the Achilles heel of predictive analytics." BMC medicine 17.1 (2019): 1-7.
