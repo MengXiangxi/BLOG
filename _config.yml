@@ -3,7 +3,7 @@ author:
   name: Xiangxi Meng
   email: https://mengxiangxi.info/
 description: > # this means to ignore newlines until "show_excerpts:"
-  A very simple blog site to track ideas using MarkDown. Please post your comments [here](https://mengxiangxi.info/BLOG/about/#comments).
+  A very simple blog site to track ideas using MarkDown.
 
 show_excerpts: true # set to true to show excerpts on the homepage
 
