@@ -104,7 +104,7 @@ PS C:\Users\UserName> $Profile
 D:\%一些正常中文%\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
 ```
 
-那么，我们首先要把那个乱码文件夹下面的 `D:\%一些乱码%\Documents\WindowsPowerShell\profile.ps1` 文件，拷贝到正确的位置，即 `D:\%一些正常中文%\Documents\WindowsPowerShell\profile.ps1`。然后编辑这个文件，在最后增加一行编码的命令：`chcp 936`。加完之后的效果如下：
+那么，我们首先要把那个乱码文件夹下面的 `D:\%一些乱码%\Documents\WindowsPowerShell\profile.ps1` 文件，拷贝到正确的位置，即 `D:\%一些正常中文%\Documents\WindowsPowerShell\profile.ps1`。如果目录不存在，就创建出来。然后编辑这个文件，在最后增加一行编码的命令：`chcp 936`。加完之后的效果如下：
 
 ```powershell
 #region conda initialize
