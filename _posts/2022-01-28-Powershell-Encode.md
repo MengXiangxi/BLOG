@@ -115,3 +115,11 @@ chcp 936
 ```
 
 然后就可以在 Powershell 里面愉快地使用 `conda` 命令了！
+
+## 其它
+
+在我的实践中，遇到了执行权限不足（`Execution Policy Restricted`）的情况。需要提升执行权限。具体做法请参考[文档](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies)。
+
+```powershell
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
+```
