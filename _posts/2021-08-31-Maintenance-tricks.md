@@ -57,9 +57,20 @@ explorer.exe .
 
 Thanks to Hongjia Liu from the Department of Radiotherapy.
 
+- Basic data science environment
+
 ```shell
 sudo docker run --name [DOCKER_NAME] -p 10000:8888 -e JUPYTER_ENABLE_LAB=yes -v [LOCAL_DIR:~/docker]:/home/jovyan/work jupyter/datascience-notebook:latest
 ```
+
+- GPU-enabled, advanced data science environment\
+An environment integrating `zsh`, `tensor-flow`, `pytorch`, and etc.
+
+```shell
+sudo docker run -d --name <CONTAINER_NAME> -p <LOCAL_PORT>:8080 --gpus all -v "<LOCAL_DIR>:/workspace" --shm-size 10240m --env AUTHENTICATE_VIA_JUPYTER="<TOKEN>" mltooling/ml-workspace-gpu:0.13.2
+```
+
+`<TOKEN>` is a paraphrase to assess the container. The CUDA version of the host server must be CUDA-11.2. The host server shall not be an LXC virtual machine.
 
 ## Jupyter Notebook
 
