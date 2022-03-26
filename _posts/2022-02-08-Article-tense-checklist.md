@@ -1,5 +1,5 @@
 ---
-title: "Article Tense Checklist"
+title: "Article tense checklist"
 categories:
   - Research
 tags:
