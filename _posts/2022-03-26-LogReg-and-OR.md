@@ -34,7 +34,7 @@ $$\mathrm{OR} = \frac{\mathrm{Odds_1}}{\mathrm{Odds_0}} = \frac{\frac{\pi_1}{1-\
 
 I suppose everyone knows the logistic regression, as it is a diagnostic model to predict a probability of having a disease $p$, based on some explanatory variables $x_i$. The model assumes that the explanatory variables have an linear relationship with the logit of $p$, where
 
-$$\mathrm{logit}(p) = \log(\mathrm{OR}) = \log(\frac{p}{1-p})$$
+$$\mathrm{logit}(p) = \log(\mathrm{Odds}) = \log(\frac{p}{1-p})$$
 
 Naturally, the form of logistic regression is,
 
@@ -81,6 +81,9 @@ It is obvious, but still worth mentioning. If the unadjusted OR is desired (I re
 - The above reasoning applies to bivariate explanatory variables.  
 
 For continuous variables, the OR is somewhat analogy. What really happen for variable $x_j$ is
+
 $$\frac{\partial \log(\mathrm{Odds})}{\partial x_j} = \beta_j$$
+
 given a $\Delta x_j = 1$, we can get the OR with $x_j$ changing by 1.
+
 $$\mathrm{OR}_j = \exp(\beta_j)$$
