@@ -1,5 +1,5 @@
 ---
-title: "Determine Odds Ratio from Logistic Regression"
+title: "Determine odds ratio from logistic regression"
 categories:
   - Statistics
 tags:
