@@ -87,3 +87,5 @@ $$\frac{\partial \log(\mathrm{Odds})}{\partial x_j} = \beta_j$$
 given a $\Delta x_j = 1$, we can get the OR with $x_j$ changing by 1.
 
 $$\mathrm{OR}_j = \exp(\beta_j)$$
+
+- Use the `oddsratio` package in R. Its [document](https://cran.r-project.org/web/packages/oddsratio/oddsratio.pdf) is written very well.
