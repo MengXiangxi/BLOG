@@ -30,3 +30,10 @@ for root, dirs, files in os.walk(os.getcwd()):
 dirInput = dir(fpath);
 dirInput(ismember({dirInput.name},{'.','..'})) = []; % remove hidden folder
 ```
+
+- Make directory if not exist (one liner).
+
+```matlab
+dirname = "name";
+if ~exist(dirname, 'dir'), mkdir(dirname); end
+```

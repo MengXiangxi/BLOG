@@ -32,6 +32,7 @@ A bunch of journals publish papers on the clinical aspects of nuclear medicine, 
 | Physics in Medicine & Biology | 2.883 | 3.609 | T3 | Q2 | [PMB](https://iopscience.iop.org/journal/0031-9155) | [ScholarOne](https://iopscience.iop.org/journal/0031-9155) | |
 | Molecular Imaging and Biology | 2.925 | 3.488 | T3/4 | Q2 | [MIB](https://www.springer.com/journal/11307) | [Editorial Mananger](https://www.editorialmanager.com/mibi/default.aspx) | Biochemical |
 | EJNMMI Physics | 2.574 | 3.309 | T3 | Q2 | [EJNMMI Phys](https://ejnmmiphys.springeropen.com/) | [Editorial Manager](https://www.editorialmanager.com/ejph/default.aspx) | OA |
+| J. Appl. Clin. Med. Phys. | | 2.102 | T4 | Q3 | [JACMP](https://aapm.onlinelibrary.wiley.com/journal/15269914) | [AAPM](https://jacmp.msubmit.net/)| |
 | Physica Medica | 2.485 | 2.685 | T3 | Q2 | [Physica Medica](https://www.journals.elsevier.com/physica-medica/) | [Editorial Manager](https://www.editorialmanager.com/ejmp/default.aspx) | European Journal of Medical Physics |
 | BMC Medical Imaging | 1.792 | 1.930 | T4 | Q3 | [BMC Medical Imaging](https://bmcmedimaging.biomedcentral.com/) | [SpringerNature](https://author-welcome.nature.com/12880) | |
 | IEEE Transactions on Nuclear Science | 1.575 | 1.679 | T1/2/3 | Q2 | [IEEE TNS](https://ieeexplore.ieee.org/xpl/mostRecentIssue.jsp?punumber=23) | [ScholarOne](https://mc.manuscriptcentral.com/tns-ieee) | Fewer NM than before (to TRPMS). |
