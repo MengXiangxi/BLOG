@@ -4,7 +4,7 @@ categories:
   - Coding
 tags:
   - Chinese
-  - Solution
+  - solution
 date: 2022-01-28
 layout: post
 ---

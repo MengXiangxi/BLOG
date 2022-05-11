@@ -5,6 +5,7 @@ categories:
 tags:
 - study note
 - resources
+- regulatory
 date: 2022-05-04
 layout: post
 ---
