@@ -17,7 +17,7 @@ Here, I am keeping a list of the relationship between the 2D DICOM tag and the c
 
 - Rescale Slope
 
-| | |
+| Item | Value |
 | --- | --- |
 | Tag | 0028, 1053 |
 | 2D DCM | RescaleSlope |
@@ -27,7 +27,7 @@ Here, I am keeping a list of the relationship between the 2D DICOM tag and the c
 
 - Radiopharmaceutical half life
 
-| | |
+| Item | Value |
 | --- | --- |
 | Tag | 0018, 1075 |
 | 2D DCM | RadiopharmaceuticalInformationSequence.Item_1.RadionuclideHalfLife |
@@ -37,7 +37,7 @@ Here, I am keeping a list of the relationship between the 2D DICOM tag and the c
 
 The injection dose at the Radiopharmaceutical Start Time
 
-| | |
+| Item | Value |
 | --- | --- |
 | Tag | 0018, 1074 |
 | 2D DCM | RadiopharmaceuticalInformationSequence.Item_1.RadionuclideTotalDose |
@@ -45,7 +45,7 @@ The injection dose at the Radiopharmaceutical Start Time
 
 - Radiopharmaceutical start time
 
-| | |
+| Item | Value |
 | --- | --- |
 | Tag | 0018, 1072 |
 | 2D DCM |  RadiopharmaceuticalInformationSequence.Item_1.RadiopharmaceuticalStartTime |
@@ -57,13 +57,15 @@ The injection dose at the Radiopharmaceutical Start Time
 
 The time point of decay correction ("NO", "START", "ADMIN")
 
-| | |
+| Item | Value |
 | --- | --- |
 | Tag | 0054, 1102 |
 | 2D DCM |  DecayCorrection |
 | 3D DCM |  PerFrameFunctionalGroupsSequence.Item_1.PETFrameCorrectionFactorsSequence.Item_1.DecayCorrection |
 
-## 2D DCM or 3D DCM?
+## More about 3D DICOM
+
+### 2D DCM or 3D DCM?
 
 I use this syntax to determine whether the dcm file read is 2D or 3D.
 
@@ -76,3 +78,7 @@ catch
     disp("Reading 3D DICOM files.")
 end
 ```
+
+### PerFrameFunctionalGroupsSequence
+
+The `PerFrameFunctionalGroupsSequence` is a collection of individual metadata which would otherwise be in each slice (2D DICOM file). It has multiple `Item`s, and the `i`'th slice is represented in `PerFrameFunctionalGroupsSequence.Item_i`.
