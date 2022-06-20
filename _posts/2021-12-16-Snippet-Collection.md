@@ -37,3 +37,26 @@ dirInput(ismember({dirInput.name},{'.','..'})) = []; % remove hidden folder
 dirname = "name";
 if ~exist(dirname, 'dir'), mkdir(dirname); end
 ```
+
+## Imagemagick
+
+- Make gif from image frames.
+
+```powershell
+magick convert -delay 10 -loop 0 *.png animated.gif
+```
+
+| Flag | Meaning |
+| ---  |   ---   |
+| `-delay` | Frame duration $x \times 10$ s |
+| `-loop`  | Number of loops, 0 for infinity |
+
+## ffmpeg
+
+- Make mp4 from image frames
+
+```powershell
+ffmpeg -framerate 30 -pattern_type glob -i 'Output_%3d.png' -c:v libx264 -pix_fmt yuv420p out.mp4
+```
+
+Refer to the [manual](https://ffmpeg.org/ffmpeg-formats.html#image2-1) for information. However, the `-pattern_type glob` command is not supported by Windows.
