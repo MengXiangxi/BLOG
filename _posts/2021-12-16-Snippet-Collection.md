@@ -43,7 +43,7 @@ I learned this from Dr. Qianqian Fang's [MCX](http://mcx.space/) demo code.
 
 ```matlab
 [yy xx zz] = meshgrid(1:60,1:60,1:60);
-S = double(sqrt((xx-30).^2+(yy-30).^2+(zz-20).^2)<=15);
+S = double(sqrt((xx-30).^2+(yy-30).^2+(zz-30).^2)<=15);
 ```
 
 ## Imagemagick
