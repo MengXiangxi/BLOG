@@ -52,7 +52,7 @@ IBSI has already become the actual standard in radiomics research.
 
 [Response Evaluation Criteria in Solid Tumours (RECIST)](https://recist.eortc.org/) is a set of criteria to measure the tumor's response to treatment. It was a joint effort among several institutes and organizations. The impact of RECIST is huge in the oncological research and clinical practice. PET/CT was cited as an evaluation method in [the latest version of RECIST 1.1](https://linkinghub.elsevier.com/retrieve/pii/S0959-8049(08)00873-3).
 
-There are various types of variants of RECIST, which are specifically optimized towards specific applications. Among them, [PET Response Criteria in Solid Tumors (PERCIST)](https://jnm.snmjournals.org/content/50/Suppl_1/122S) has been the most influential recommendations for PET evaluation of tumor response.
+There are various types of variants of RECIST, which are specifically optimized towards specific applications. Among them, [PET Response Criteria in Solid Tumors (PERCIST)](https://jnm.snmjournals.org/content/50/Suppl_1/122S) has been the most influential recommendations for PET evaluation of tumor response. In addition, [a later paper](https://pubs.rsna.org/doi/full/10.1148/radiol.2016142043) clarified many important points in PERCIST.
 
 ## NEMA, IEC, and AAPM standards
 
