@@ -29,6 +29,7 @@ Here is a collection of most used symbols and their encodings.
 | γ | 03B3 | 0947 | Greek gamma |
 | ℃ | 2103 | 8451 | Degree Celsius |
 | Å | 212B | 8491 | Angstrom |
+| ⋅ | 22C5 | 8901 | Dot Operator |
 | ☑ | 2611 | 9745 | Checked box |
 | ✓ | 2713 | 10003 | Check mark |
 | ✗ | 2717 | 10007 | Ballot cross mark |
