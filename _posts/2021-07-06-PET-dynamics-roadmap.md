@@ -27,6 +27,8 @@ Watabe worked under Richard Carson, and is still maintaining Carson's BLD softwa
 Chapter 23 of this book, "Kinetic Modeling in Positron Emission Tomography", by E. D. Morris et. al..
 - **Positron Emission Tomography: Basic Sciences**, edited by Dale L. Bailey et. al., Springer, 2005.\
 Chapter 6 of this book, "Tracer Kinetic Modeling in PET", by Richard E. Carson.
+- **Quantitative Analysis in Nuclear Medicine Imaging**, edited by Habib Zaidi, Springer, 2006.\
+Chapter 12 of this book, "Tracer Kinetic Modeling in Nuclear Medicine: Theory and Applications", by M. Bentourkia and H. Zaidi.
 
 ## Review Articles
 

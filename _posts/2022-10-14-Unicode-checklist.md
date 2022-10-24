@@ -27,9 +27,14 @@ Here is a collection of most used symbols and their encodings.
 | α | 03B1 | 0945 | Greek alpha |
 | β | 03B2 | 0946 | Greek beta |
 | γ | 03B3 | 0947 | Greek gamma |
+| – | 2013 | 8211 | En dash, LaTeX `--` |
+| — | 2014 | 8212 | Em dash, LaTeX `---` |
 | ℃ | 2103 | 8451 | Degree Celsius |
 | Å | 212B | 8491 | Angstrom |
 | ⋅ | 22C5 | 8901 | Dot Operator |
+| − | 2212 | 8722 | Minus sign [*](#minus) |
 | ☑ | 2611 | 9745 | Checked box |
 | ✓ | 2713 | 10003 | Check mark |
 | ✗ | 2717 | 10007 | Ballot cross mark |
+
+<a id="minus"></a> * In many situations, it is encouraged to use hyphen (`-`) directly as the minus sign.
