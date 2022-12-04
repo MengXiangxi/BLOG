@@ -22,4 +22,5 @@ ehthumbs.db
 Thumbs.db
 
 # Obsidian
-.obsidian/
+.obsidian/*
+_templates/*
