@@ -47,5 +47,5 @@ There are many materials for introductory level radiomics learning. I am not pro
 
 ## Other resources
 
-- As I have stated, standardization and harmonization are two key issues in radiomics. Without them, the generalization ability of radiomic models are questionable. The [Imaging Biomarker Standardization Initiative](https://theibsi.github.io/) is an organization devoted to develop standardized image biomarkers (features) for radiomics analysis. The works of this collaboration are highly valued by the community, and the collaboration is still continuing.
+- As I have stated, standardization and harmonization are two key issues in radiomics. Without them, the generalization ability of radiomic models are questionable. The [Imaging Biomarker Standardization Initiative](https://theibsi.github.io/) is an organization devoted to develop standardized image biomarkers (features) for radiomics analysis. The works of this collaboration are highly valued by the community, and the collaboration is still continuing. You can find more about IBSI in [the other blog post on this site](https://mengxiangxi.info/BLOG/imaging/2022/05/04/Standardization-of-PET.html).
 - You are encouraged to explore the GitHub topic page of [#radiomics](https://github.com/topics/radiomics) for related code and projects.
