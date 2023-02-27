@@ -23,6 +23,22 @@ Here, I am keeping a list of the relationship between the 2D DICOM tag and the c
 | 2D DCM | RescaleSlope |
 | 3D DCM | SharedFunctionalGroupsSequence.Item_1.PixelValueTransformationSequence.Item_1.RescaleSlope |
 
+- Pixel Spacing
+
+| Item | Value |
+| --- | --- |
+| Tag | 0028, 0030 |
+| 2D DCM | PixelSpacing |
+| 3D DCM | SharedFunctionalGroupsSequence.Item_1.PixelMeasuresSequence.Item_1.PixelSpacing |
+
+- Slice Thickness
+
+| Item | Value |
+| --- | --- |
+| Tag | 0018, 0050 |
+| 2D DCM | SliceThickness |
+| 3D DCM | SharedFunctionalGroupsSequence.Item_1.PixelMeasuresSequence.Item_1.SliceThickness |
+
 ## Radionuclide properties
 
 - Radiopharmaceutical half life
@@ -82,3 +98,22 @@ end
 ### PerFrameFunctionalGroupsSequence
 
 The `PerFrameFunctionalGroupsSequence` is a collection of individual metadata which would otherwise be in each slice (2D DICOM file). It has multiple `Item`s, and the `i`'th slice is represented in `PerFrameFunctionalGroupsSequence.Item_i`.
+
+### How to find corresponding metadata in MATLAB
+
+```MATLAB
+% First, obtain the DICOM information struct
+info = dicominfo("#PATH_TO_DCM_FILE#");
+
+% Direct the output to a text file
+diary('./dcminfo.txt')
+
+% Write the struct into the text file
+% Use the third-party function `unfold()`
+unfold(info)
+
+% Search for the keyword using a text editor
+
+% Stop recording the output
+diary off
+```
