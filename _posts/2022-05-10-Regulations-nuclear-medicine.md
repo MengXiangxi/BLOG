@@ -43,9 +43,7 @@ layout: post
 ### 其它标准
 
 - GBZ 120-2020 核医学放射防护要求 【国家职业卫生标准】[下载地址](http://www.nhc.gov.cn/fzs/s7852d/202011/9d778170b914471fad56cf8308d4bda1/files/657e04bc556e428db6db6f4bc98191a7.pdf)
-
 > 本标准代替了GBZ 120—2006、GBZ 133—2009、GBZ 134—2002、GBZ 136—2002、GBZ 178—2017、WS 457—2014、WS 533—2017、GBZ 179—2006的核医学部分。
-
 - GBZ 98—2020 放射工作人员健康要求及监护规范 【国家职业卫生标准】[下载地址](http://www.nhc.gov.cn/fzs/s7852d/202011/9d778170b914471fad56cf8308d4bda1/files/9c0c4af0e6704c56aa56ede4bb1a7b14.pdf)
 - <del>WS 533—2017 临床核医学患者防护要求 【卫生行业标准】</del> 
 - HJ 1188—2021 核医学辐射防护与安全要求 【生态环境标准】[下载地址](https://www.mee.gov.cn/ywgz/fgbz/bz/bzwb/hxxhj/xgbz/202109/W020210922368889711824.pdf)
@@ -59,18 +57,15 @@ layout: post
 - IEC TR 61675-1:2022 Radionuclide imaging devices - Characteristics and test conditions - Part 1: Positron emission tomographs [购买](https://webstore.iec.ch/publication/67292)
 - IEC TR 61948-3:2018 Nuclear medicine instrumentation - Routine tests - Part 3: Positron emission tomographs [购买](https://webstore.iec.ch/publication/60788)
 - GB/T 18988.1—2013 放射性核素成像设备 性能和试验规则 第1部分：正电子发射断层成像装置 [未经证实的来源](https://file.wuxuwang.com/qixieflyzbz/355_GB18988.1-2013.pdf)
-
 > 引用IEC TR 61675-1:1998，但将NEMA NU2-2007列入附录
-
 - GB/T 20013.3—2015 核医学仪器 例行试验 第3部分：正电子发射断层成像装置 [未经证实的来源](https://file.wuxuwang.com/qixieflyzbz/354_GB20013.3-2015.pdf)
-
 > 引用IEC TR 61948-3:2005
-
-- GB/T 39867—2021 正电子发射断层扫描仪用锗酸铋闪烁晶体
+- GB/T 39867—2021 正电子发射断层扫描仪用锗酸铋闪烁晶体 [下载地址](https://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=008448C47454207CAB87FF9E7FFC7106)
+- WS 817—2023 正电子发射断层成像（PET）设备质量检测标准 [下载地址](http://www.nhc.gov.cn/wjw/pcrb/202303/c3f0c8f0185e4f2fa065ba39b08d0dbd.shtml)
+- DB32/T 4451.8-2023 医用影像设备临床使用管理与质量控制规范 第8部分：正电子发射及X射线计算机断层成像系统（PETCT）
+- DB32/T 4451.9-2023 医用影像设备临床使用管理与质量控制规范 第9部分：正电子发射磁共振成像系统（PETMR）
 - YY/T0829—2011 正电子发射及X射线计算机断层成像系统性能和试验方法 [未经证实的来源](https://file.wuxuwang.com/qixieflyzbz/357_YY0829-2011.pdf)
-
-> 这一标准分别规定了CT和PET部分的性能测试方案与标准，其中PET部分更偏向NEMA NU2标准，并将NU2-2017标准引入附录。
-
+> 这一标准分别规定了CT和PET部分的性能测试方案与标准，其中PET部分更偏向NEMA NU2标准，并将NU2-2018 标准引入附录。
 - T/CAME 6—2019 PET/MR质量控制检测规范
 - T/CAME 10-2019 正电子发射X射线计算机断层成像系统(PET/CT)图像融合软件临床应用质量检测技术规范
 - 国家药监局《正电子发射/X射线计算机断层成像系统注册技术审查指导原则》 [下载地址](https://www.cmde.org.cn/flfg/zdyz/zdyzwbk/20200312140405299.html)
@@ -86,4 +81,4 @@ layout: post
 还有两项职业卫生标准（GBZ）在征求意见：
 
 - 正电子发射断层成像设备（PET）质量控制检测规范（与WS/T名称相同但内容有差异）
-- 正电子发射断层成像（pet）的放射防护要求
+- 正电子发射断层成像（PET）的放射防护要求
