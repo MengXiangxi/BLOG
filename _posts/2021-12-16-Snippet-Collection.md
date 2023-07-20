@@ -46,6 +46,29 @@ I learned this from Dr. Qianqian Fang's [MCX](http://mcx.space/) demo code.
 S = double(sqrt((xx-30).^2+(yy-30).^2+(zz-30).^2)<=15);
 ```
 
+- To define input arguments with `"name", "value"` pairs
+
+```matlab
+function testarg(x, y, varargin)
+params.name_1 = 0;
+params.name_2 = 0;
+
+input_params = struct(varargin{:});
+keys = fieldnames(input_params);
+for i = 1:length(input_params)
+    cur_key = keys{i};
+    if isfield(params, cur_key)
+        params.(cur_key) = input_params.(cur_key); 
+    else
+        warning("Unable to recognize '%s'", cur_key)
+    end
+end
+```
+
+```matlab
+>>> testarg(x, y, 'name_1', 1)
+```
+
 ## Imagemagick
 
 - Make gif from image frames.
