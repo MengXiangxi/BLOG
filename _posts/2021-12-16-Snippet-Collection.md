@@ -55,13 +55,15 @@ params.name_2 = 0;
 
 input_params = struct(varargin{:});
 keys = fieldnames(input_params);
-for i = 1:length(input_params)
-    cur_key = keys{i};
-    if isfield(params, cur_key)
-        params.(cur_key) = input_params.(cur_key); 
-    else
-        warning("Unable to recognize '%s'", cur_key)
-    end
+if nargin>2
+  for i = 1:length(input_params)
+      cur_key = keys{i};
+      if isfield(params, cur_key)
+          params.(cur_key) = input_params.(cur_key); 
+      else
+          warning("Unable to recognize '%s'", cur_key)
+      end
+  end
 end
 ```
 
@@ -79,7 +81,7 @@ magick convert -delay 10 -loop 0 *.png animated.gif
 
 | Flag | Meaning |
 | ---  |   ---   |
-| `-delay` | Frame duration $x \times 10$ s |
+| `-delay` | Frame duration $x \times 10$ ms |
 | `-loop`  | Number of loops, 0 for infinity |
 
 ## ffmpeg
