@@ -36,6 +36,27 @@ sudo chrown -R $USER [FOLDER]
 
 - GPU monitoring: `nvidia-smi`
 
+- Add to user `$PATH`
+
+```shell
+sudo nano ~/.bashrc
+```
+
+Edit, and add the following line to `~/.bashrc`
+
+```text
+export PATH=$PATH:/some/directory
+```
+
+Then,
+
+```shell
+source ~/.bashrc
+echo $PATH
+```
+
+Then the directory added should be there in the `$PATH` variable.
+
 ## WSL
 
 > Always use WSL2
