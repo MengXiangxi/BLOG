@@ -175,6 +175,27 @@ git remote -v
 # Validate
 ```
 
+- Repair lost `.git` folder (as in [this](https://www.reddit.com/r/git/comments/1mhus5/i_lost_my_git_folder_i_have_a_copy_of_the/) post)
+
+```git
+# Create a new .git
+git init
+# Create objects for local files
+git checkout -b temp
+git add .
+git commit -m 'importing local files'
+# Configure your remote
+git remote add origin git@xxx.com:xxx/xxx.git
+# Now, have it grab the rest of the objects from the remote
+git fetch --all
+# And switch back to it:
+git checkout remotes/origin/main
+git checkout -b main
+# And, if you didn't have any un-pushed changes:
+# delete the local branch
+git branch -D temp
+```
+
 ## R
 
 - To update R on Windows
