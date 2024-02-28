@@ -1,5 +1,5 @@
 ---
-title: "Notes on tags of UIH 3D DICOM in MATLAB"
+title: "Notes on tags of UIH 3D DICOM in MATLAB (and Python)"
 categories:
 - Imaging
 tags:
@@ -13,6 +13,25 @@ In MATLAB, the processing of DICOM files is taken care of by the [Image Processi
 
 Here, I am keeping a list of the relationship between the 2D DICOM tag and the corresponding 3D DICOM tag. I hope it will help people working with 3D DICOM files on MATLAB.
 
+> Updated 28th Feb, 2024: I am appending the Python version of the tag list. The Python library `pydicom` is used to read the DICOM files.
+>
+> ```python
+> import pydicom
+> 
+> ds = pydicom.dcmread("dicomfile.dcm")
+> tag1 = ds.TagName
+> n = 0 # for the first item
+> tag2 = ds.TagGroup[n].TagName
+> ```
+>
+> Similarly, the MATLAB code for accessing the tag is like:
+>
+> ```matlab
+> info = dicominfo("dicomfile.dcm")
+> tag1 = info.TagName
+> tag2 = info.TagGroup.Item_1.TagName % for the first item
+> ```
+
 ## Basic
 
 - Rescale Slope
@@ -21,7 +40,8 @@ Here, I am keeping a list of the relationship between the 2D DICOM tag and the c
 | --- | --- |
 | Tag | 0028, 1053 |
 | 2D DCM | RescaleSlope |
-| 3D DCM | SharedFunctionalGroupsSequence.Item_1.PixelValueTransformationSequence.Item_1.RescaleSlope |
+| 3D DCM, MATLAB | SharedFunctionalGroupsSequence.Item_1.PixelValueTransformationSequence.Item_1.RescaleSlope |
+| 3D DCM, python | SharedFunctionalGroupsSequence[0].PixelValueTransformationSequence[0].RescaleSlope |
 
 - Pixel Spacing
 
@@ -29,7 +49,8 @@ Here, I am keeping a list of the relationship between the 2D DICOM tag and the c
 | --- | --- |
 | Tag | 0028, 0030 |
 | 2D DCM | PixelSpacing |
-| 3D DCM | SharedFunctionalGroupsSequence.Item_1.PixelMeasuresSequence.Item_1.PixelSpacing |
+| 3D DCM, MATLAB | SharedFunctionalGroupsSequence.Item_1.PixelMeasuresSequence.Item_1.PixelSpacing |
+| 3D DCM, python | SharedFunctionalGroupsSequence[0].PixelMeasuresSequence[0].PixelSpacing |
 
 - Slice Thickness
 
@@ -37,7 +58,8 @@ Here, I am keeping a list of the relationship between the 2D DICOM tag and the c
 | --- | --- |
 | Tag | 0018, 0050 |
 | 2D DCM | SliceThickness |
-| 3D DCM | SharedFunctionalGroupsSequence.Item_1.PixelMeasuresSequence.Item_1.SliceThickness |
+| 3D DCM, MATLAB | SharedFunctionalGroupsSequence.Item_1.PixelMeasuresSequence.Item_1.SliceThickness |
+| 3D DCM, python | SharedFunctionalGroupsSequence[0].PixelMeasuresSequence[0].SliceThickness |
 
 ## Radionuclide properties
 
@@ -47,7 +69,8 @@ Here, I am keeping a list of the relationship between the 2D DICOM tag and the c
 | --- | --- |
 | Tag | 0018, 1075 |
 | 2D DCM | RadiopharmaceuticalInformationSequence.Item_1.RadionuclideHalfLife |
-| 3D DCM | RadiopharmaceuticalInformationSequence.Item_1.RadionuclideHalfLife |
+| 3D DCM, MATLAB | RadiopharmaceuticalInformationSequence.Item_1.RadionuclideHalfLife |
+| 3D DCM, python | RadiopharmaceuticalInformationSequence[0].RadionuclideHalfLife |
 
 - Radionuclide total dose
 
@@ -57,7 +80,8 @@ The injection dose at the Radiopharmaceutical Start Time
 | --- | --- |
 | Tag | 0018, 1074 |
 | 2D DCM | RadiopharmaceuticalInformationSequence.Item_1.RadionuclideTotalDose |
-| 3D DCM | RadiopharmaceuticalInformationSequence.Item_1.RadionuclideTotalDose |
+| 3D DCM, MATLAB | RadiopharmaceuticalInformationSequence.Item_1.RadionuclideTotalDose |
+| 3D DCM, python | RadiopharmaceuticalInformationSequence[0].RadionuclideTotalDose |
 
 - Radiopharmaceutical start time
 
@@ -65,7 +89,8 @@ The injection dose at the Radiopharmaceutical Start Time
 | --- | --- |
 | Tag | 0018, 1072 |
 | 2D DCM |  RadiopharmaceuticalInformationSequence.Item_1.RadiopharmaceuticalStartTime |
-| 3D DCM |  RadiopharmaceuticalInformationSequence.Item_1.RadiopharmaceuticalStartTime |
+| 3D DCM, MATLAB |  RadiopharmaceuticalInformationSequence.Item_1.RadiopharmaceuticalStartTime |
+| 3D DCM, python |  RadiopharmaceuticalInformationSequence[0].RadiopharmaceuticalStartTime |
 
 ## Decay correction
 
@@ -77,13 +102,14 @@ The time point of decay correction ("NO", "START", "ADMIN")
 | --- | --- |
 | Tag | 0054, 1102 |
 | 2D DCM |  DecayCorrection |
-| 3D DCM |  PerFrameFunctionalGroupsSequence.Item_1.PETFrameCorrectionFactorsSequence.Item_1.DecayCorrection |
+| 3D DCM, MATLAB |  PerFrameFunctionalGroupsSequence.Item_1.PETFrameCorrectionFactorsSequence.Item_1.DecayCorrection |
+| 3D DCM, python |  PerFrameFunctionalGroupsSequence[0].PETFrameCorrectionFactorsSequence[0].DecayCorrection |
 
 ## More about 3D DICOM
 
 ### 2D DCM or 3D DCM?
 
-I use this syntax to determine whether the dcm file read is 2D or 3D.
+I use this syntax in MATLAB to determine whether the dcm file read is 2D or 3D.
 
 ```matlab
 info = dicominfo("dicomfile.dcm")
