@@ -57,6 +57,12 @@ echo $PATH
 
 Then the directory added should be there in the `$PATH` variable.
 
+- Mount a shared drive (samba)
+
+```shell
+sudo mount -t cifs //0.0.0.0/dir_name /mnt/destin -o username=$NAME
+```
+
 ## WSL
 
 > Always use WSL2
