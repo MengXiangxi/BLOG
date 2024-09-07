@@ -36,5 +36,6 @@ Here is a collection of most used symbols and their encodings.
 | ☑ | 2611 | 9745 | Checked box |
 | ✓ | 2713 | 10003 | Check mark |
 | ✗ | 2717 | 10007 | Ballot cross mark |
+| 🗹 | 1F5F9 | 128505 | Ballot box with bold check |
 
 <a id="minus"></a> * In many situations, it is encouraged to use hyphen (`-`) directly as the minus sign.
