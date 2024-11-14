@@ -211,3 +211,25 @@ install.packages("installr") # if not previously installed
 library(installr)
 updateR()
 ```
+
+## Windows Terminal
+
+- Add an admin PowerShell profile
+
+Command line:
+
+```text
+%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe -Command Start-Process -Verb RunAs "wt"
+```
+
+Starting directory: `Use parent process directory`
+
+## Powershell
+
+- Allowing local script. The following commands need to be run with the admin permission.
+
+```powershell
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
+# OR
+Set-ExecutionPolicy -ExecutionPolicy Bypass
+```

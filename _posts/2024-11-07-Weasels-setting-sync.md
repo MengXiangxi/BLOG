@@ -50,3 +50,5 @@ C:\"Program Files (x86)"\Rime\weasel-*.*.*\WeaselDeployer.exe /sync
 ```
 
 其中，参数`-WindowStyle Hidden`保证运行脚本时不会将命令窗口调到前台，但部分机器上会失效，目前原因不明。
+
+注意，Windows客户端默认进制运行PowerShell脚本，可以参考[这里](../../../../coding/2021/09/04/Life-hack.html#PowerShell)解除限制。
