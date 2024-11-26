@@ -32,10 +32,10 @@ sync_dir: "D:/Sync/Miscellaneous/rime_sync"
 - 新建一个PowerShell脚本，内容如下：
 
 ```powershell
-C:\"Program Files (x86)"\Rime\weasel-*.*.*\WeaselDeployer.exe /sync
+C:\"Program F"*\Rime\weasel-*.*.*\WeaselDeployer.exe /sync
 ```
 
-其中通配符是为了适配不同的版本。将其命名为`sync_rime.ps1`，可保存在`D:\Library\Scripts\`之类的目录下。
+其中通配符是为了适配不同的版本，包括有的默认安装路径会在`Program Files`而非`Program Files (x86)`的64-bit系统。将其命名为`sync_rime.ps1`，可保存在`D:\Library\Scripts\`之类的目录下。可以在不同Windows计算机上对这一脚本进行同步，因为它具有一定普适性。
 
 - 在任务计划程序中新建一个任务。
 
