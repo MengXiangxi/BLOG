@@ -7,6 +7,7 @@ tags:
 - solution
 date: 2025-05-11
 layout: post
+excerpt: I have a webpage to keep track of all peer-reviewed papers I could find on the world's first total-body PET scanner, uEXPLORER. On this webpage, I used a javascript code called bibtex_js to render the bibliography from a bibtex file that I manually maintain. Over the years, I have developed a set of rules and conventions to build the bibliography entries, assigning different meanings and functions to different fields.
 ---
 
 ## The problem definition
@@ -31,7 +32,7 @@ keywords={FAPI; cardiovascular}
 Then, the javascript code will render the entry as follows:
 
 > **FAPI-targeted molecular imaging: Transforming insights into post-ischemic myocardial remodeling?**
-> Luca Filippi, Marco Alfonso  Perrone, Orazio Schillaci. *Molecular Diagnostics \& Therapy*
+> Luca Filippi, Marco Alfonso  Perrone, Orazio Schillaci. *Molecular Diagnostics & Therapy*
 > [[doi link]](https://dx.doi.org/10.1007/s40291-025-00778-6) [[PubMed]](https://pubmed.ncbi.nlm.nih.gov/40263181/) | Tor Vergata University Hospital | **Tag:** FAPI; cardiovascular
 
 ## Manual Workflow
