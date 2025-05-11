@@ -9,13 +9,40 @@ date: 2025-05-11
 layout: post
 ---
 
+## The problem definition
+
 I have a [webpage](https://mengxiangxi.info/Link/uexplorer.html) to keep track of all peer-reviewed papers I could find on the world's first total-body PET scanner, uEXPLORER. On this webpage, I used a javascript code called [bibtex_js](https://github.com/pcooksey/bibtex-js) to render the bibliography from a bibtex file that I manually maintain. Over the years, I have developed a set of rules and conventions to build the bibliography entries, assigning different meanings and functions to different fields.
+
+For a certain paper that I want to include in my bibliography, [like this one](https://link.springer.com/article/10.1007/s40291-025-00778-6), I will add the following entry to my bibtex file:
+
+```bibtex
+@article{filippi2025fapitargeted,
+title={FAPI-targeted molecular imaging: Transforming insights into post-ischemic myocardial remodeling?},
+author={Filippi, Luca and Perrone, Marco Alfonso and Schillaci, Orazio},
+journal={Molecular Diagnostics \& Therapy},
+year={Just Accepted},
+doi={10.1007/s40291-025-00778-6},
+pmid={40263181},
+institution={Tor Vergata University Hospital},
+keywords={FAPI; cardiovascular}
+}
+```
+
+Then, the javascript code will render the entry as follows:
+
+> **FAPI-targeted molecular imaging: Transforming insights into post-ischemic myocardial remodeling?**
+> Luca Filippi, Marco Alfonso  Perrone, Orazio Schillaci. *Molecular Diagnostics \& Therapy*
+> [[doi link]](https://dx.doi.org/10.1007/s40291-025-00778-6) [[PubMed]](https://pubmed.ncbi.nlm.nih.gov/40263181/) | Tor Vergata University Hospital | **Tag:** FAPI; cardiovascular
+
+## Manual Workflow
 
 In my routine workflow, I usually first export a preliminary bibtex entry using the Google Scholar [button](https://chromewebstore.google.com/detail/ldipcbpaocekfooobnbcddclnhejkcpn) browser addon. Then, I retrieve various information from the publisher's site and [PubMed](https://pubmed.ncbi.nlm.nih.gov/), gradually filling out all fields.
 
 The journal title should be in the Sentence case; the author names should not be abbreviated; the institution names should be concise and consistent; the keywords should be reflect the tracers, the diseases, and the type of paper. Multiple rules apply which requires complicated analysis.
 
 Admittedly, this is slow and distractive. My original intention was to keep a record of the papers I have read, but I found myself spending more time on formatting than on reading.
+
+## How AI helps
 
 Things changed when I realized that I could build an agent using some certain MCPs (model context protocol). There is one called "fetch" which allows the LLM to retrieve information from a webpage. There is another called "PubMed MCP" which can communicate with the PubMed website. Those are almost all I need.
 
@@ -279,3 +306,51 @@ When I send the link "https://pubmed.ncbi.nlm.nih.gov/40208315/" to the model, i
 >
 
 It is almost perfect. The only changes I have made is to add the other institution (Affiliated Hospital of Qingdao University), and revised tracer name in the keyword (Al18F-NOTA-HER2-BCH). This marks a huge improvement. The workflow has been greatly simplified, and the efficiency has been greatly improved. I am very satisfied.
+
+## Appendix
+
+Here are the prompt I am using to update the "Just Accepted" entries after the corresponding paper has been published.
+
+```text
+I am going to give you a bibtex entry. In the entry I am providing, the year tag is "Just Accepted". Your task is, based on the information in the bibtex entry, you need to determine if the paper has already been published. If the paper has still not been published (i.e. still is in "early access" or related status, without a final page number), just tell me so. Otherwise, if the paper has already been published, you need to give me a complete bib entry, with year, volume, number and pages updated, and all other fields identical to the input.
+
+You should not change the format in the output. Do not add spaces.
+
+Example input:
+@article{gu2024lowbmi,
+title={Low dose optimization for total-body 2-[<sup>18</sup>F]FDG PET/CT imaging: a single-center study on feasibility based on body mass index stratification},
+author={Gu, Taoying and Liu, Siwei and Hou, Xiaoguang and Zhao, Liwei and Ng, Yee Ling and Wang, Jingyi and Shi, Hongcheng},
+journal={European Radiology},
+year={Just Accepted},
+doi={10.1007/s00330-024-11039-1},
+pmid={39214892},
+institution={Zhongshan Hospital},
+keywords={low dose}
+}
+===
+Output:
+@article{gu2024lowbmi,
+title={Low dose optimization for total-body 2-[<sup>18</sup>F]FDG PET/CT imaging: a single-center study on feasibility based on body mass index stratification},
+author={Gu, Taoying and Liu, Siwei and Hou, Xiaoguang and Zhao, Liwei and Ng, Yee Ling and Wang, Jingyi and Shi, Hongcheng},
+journal={European Radiology},
+year={2025},
+volume={35},
+number={4},
+pages={1881--1893},
+doi={10.1007/s00330-024-11039-1},
+pmid={39214892},
+institution={Zhongshan Hospital},
+keywords={low dose}
+}
+```
+
+And this one is used to update the lists of all authors (not included in the main prompt due to the extra length/tokens), all institutions and all keywords.
+
+```text
+I want you to generate three lists from the following url (a bibtex file): https://mengxiangxi.info/bibliography/uExplorer.bib
+The first list would be a list of all author names;
+The second list would be a list of all institution names;
+The third list would be a list of all keywords.
+
+Each list should be in one line. Please remove the duplicated entries. The different entries should be separated by a semicolon.
+```
