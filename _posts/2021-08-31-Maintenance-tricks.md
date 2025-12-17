@@ -131,6 +131,12 @@ jupyter kernelspec uninstall myenv
 
 - Useful pip mirrors
 
+Recommended: Peking University mirror
+```bash
+pip install pip -U -i https://mirrors.pku.edu.cn/pypi/web/simple # 首先将pip版本升级至10.0.0+
+pip config set global.index-url https://mirrors.pku.edu.cn/pypi/web/simple
+```
+Other mirrors
 ```bash
 # 清华源
 pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
@@ -145,7 +151,6 @@ pip config set global.index-url http://pypi.douban.com/simple/
 ## Git
 
 - Proxy
-
 ```bash
 git config --global https.proxy http://127.0.0.1:1080
 git config --global https.proxy https://127.0.0.1:1080
