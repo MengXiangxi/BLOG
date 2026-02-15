@@ -42,7 +42,7 @@ The traditional approach would have been:
 
 This process is tedious, error-prone, and frankly, boring. For a 2-CD opera with 31 total tracks and multiple INDEX markers within many tracks, this could easily take 2-3 hours of concentrated work.
 
-![Album Pamphlet](/assets/images/2026-02-15-Generate-Cue-File-Using-LLM/pamphlet.png)
+![Album Pamphlet]({{ site.baseurl }}/assets/images/2026-02-15-Generate-Cue-File-Using-LLM/pamphlet.png)
 
 *Figure 1: The album pamphlet containing all track information in Japanese and French*
 
@@ -109,7 +109,7 @@ I didn't need to explain:
 
 The agent figured all of that out on its own.
 
-![Generated Cue Files in Foobar](/assets/images/2026-02-15-Generate-Cue-File-Using-LLM/foobar.png)
+![Generated Cue Files in Foobar]({{ site.baseurl }}/assets/images/2026-02-15-Generate-Cue-File-Using-LLM/foobar.png)
 
 *Figure 2: The generated cue files loaded in foobar2000, showing all tracks with proper metadata*
 
